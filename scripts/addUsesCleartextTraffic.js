@@ -17,7 +17,6 @@ module.exports = function(context) {
         result = data.replace(/<application/g, '<application android:usesCleartextTraffic="true"');
       } else {
         result = data.replace(/android:usesCleartextTraffic=["']false["']/g, 'android:usesCleartextTraffic="true"');
-        console.log(result);
       }
 
       fs.writeFile(manifestFile, result, 'utf8', function (err) {
