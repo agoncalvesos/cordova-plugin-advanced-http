@@ -59,7 +59,7 @@
     <framework src="SystemConfiguration.framework"/>
   </platform>
   <platform name="android">
-    <hook type="before_build" src="scripts/addUsesCleartextTraffic.js" />
+    <hook type="before_compile" src="scripts/addUsesCleartextTraffic.js" />
     <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
         <application android:usesCleartextTraffic="true"/>
     </edit-config>
